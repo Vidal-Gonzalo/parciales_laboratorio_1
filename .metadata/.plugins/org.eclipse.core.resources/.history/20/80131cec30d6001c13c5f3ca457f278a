@@ -394,35 +394,3 @@ int Relationship_checkSoldTrackings(Tracking trackingList[], int trackingSize,
 	return r;
 }
 
-int Relationship_FilterProductByName(Product productList[], int productSize) {
-	int r = -1;
-	char productNameToSearch[MAX_PRODUCTNAME];
-	Product aux;
-
-	if (productList != NULL && productSize > 0) {
-
-		if (utn_getString(productNameToSearch, MAX_PRODUCTNAME,
-				"Ingrese el nombre de producto a buscar\n",
-				"Ha habido un error, vuelva a intentar.\n", 3) == 0) {
-			for (int i = 0; i < productSize; i++) {
-				for (int j = i + 1; j < productSize; j++) {
-					if (strcmp(productList[i].productName, productNameToSearch)
-							== 0
-							&& strcmp(productList[j].productName,
-									productNameToSearch) == 0) {
-						if (productList[i].stock < productList[j].stock) {
-							aux = productList[i];
-							productList[i] = productList[j];
-							productList[j] = aux;
-						}
-					}
-				}
-			}
-			r = 0;
-		}
-		Product_PrintProducts(productList, productSize, ACTIVE);
-
-	}
-	return r;
-}
-

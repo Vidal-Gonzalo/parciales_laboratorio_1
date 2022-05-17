@@ -22,14 +22,10 @@ int Relationship_BuyProductAndNewTracking(Product productList[], int size,
 int Relationship_checkBoughtTrackings(Tracking trackingList[], int trackingSize,
 		Product productList[], int productSize, User buyer);
 
-int Relationship_CheckAndRestockMyProducts(Product productList[],
-		int productSize, User seller);
-
 int Relationship_checkSoldTrackings(Tracking trackingList[], int trackingSize,
 		Product productList[], int productSize, User seller);
 
 int Relationship_SellProduct(Product productList[], int size, User seller);
 
-int Relationship_FilterProductByName(Product productList[], int productSize) ;
-
+int CalculateDistance(int postalCode, int *kilometers);
 #endif /* RELATIONSHIP_TRACKINGUSERANDPRODUCTS_H_ */

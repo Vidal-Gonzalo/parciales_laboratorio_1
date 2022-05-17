@@ -126,54 +126,23 @@ int Relationship_SellProduct(Product productList[], int size, User seller) {
 int Relationship_CheckAndRestockMyProducts(Product productList[],
 		int productSize, User seller) {
 	int r = -1;
-	int productsInSystem = 0;
 	int idToModify;
-	int stockToAdd;
 
 	if (productList != NULL && productSize > 0) {
 		for (int i = 0; i < productSize; i++) {
 			if (productList[i].idSeller == seller.idUsuario) {
-				productsInSystem = 1;
 				Product_printOne(productList[i]);
 			}
-		}
-		if (productsInSystem == 1) {
 			if (confirmation(
 					"\n\n¿Desea reponer stock de alguno de sus productos? 1)Si / Otro numero) No\n\n",
 					"Ha habido un error\n") == 1) {
-				if (utn_getNumero(
+				utn_getNumero(
 						"Ingrese el ID del producto al que quiera sumarle stock\n",
 						"Ha habido un error, intentelo nuevamente\n", 1, 3,
-						&idToModify) == 0) {
-					int indexToModify = Product_SearchIndexPerId(productList,
-							productSize, idToModify, ACTIVE);
-					if (indexToModify != -1) {
-						printf(
-								"El producto que desea restockear es el siguiente:\n");
-						Product_printOne(productList[indexToModify]);
-						if (confirmation(
-								"\n\n¿Esta seguro que desea restockearlo? 1)Si / Otro numero) No\n\n",
-								"Ha habido un error\n") == 1) {
-							if (utn_getNumero(
-									"¿Cuantos elementos desea añadir?\n",
-									"Ha habido un error\n", 1, 3, &stockToAdd)
-									== 0) {
-								productList[indexToModify].stock =
-										productList[indexToModify].stock
-												+ stockToAdd;
-								printf("\n¡Restock realizado!\n");
-								r = 0;
-							}
-						}
-					}
-				}
-			} else {
-				printf("No se ha realizado ningun restock.\n");
+						&idToModify);
 			}
-		} else {
-			printf("\nNo tenes productos a la venta\n");
-		}
 
+		}
 	}
 	return r;
 }
@@ -391,38 +360,6 @@ int Relationship_checkSoldTrackings(Tracking trackingList[], int trackingSize,
 		}
 	}
 	r = 0;
-	return r;
-}
-
-int Relationship_FilterProductByName(Product productList[], int productSize) {
-	int r = -1;
-	char productNameToSearch[MAX_PRODUCTNAME];
-	Product aux;
-
-	if (productList != NULL && productSize > 0) {
-
-		if (utn_getString(productNameToSearch, MAX_PRODUCTNAME,
-				"Ingrese el nombre de producto a buscar\n",
-				"Ha habido un error, vuelva a intentar.\n", 3) == 0) {
-			for (int i = 0; i < productSize; i++) {
-				for (int j = i + 1; j < productSize; j++) {
-					if (strcmp(productList[i].productName, productNameToSearch)
-							== 0
-							&& strcmp(productList[j].productName,
-									productNameToSearch) == 0) {
-						if (productList[i].stock < productList[j].stock) {
-							aux = productList[i];
-							productList[i] = productList[j];
-							productList[j] = aux;
-						}
-					}
-				}
-			}
-			r = 0;
-		}
-		Product_PrintProducts(productList, productSize, ACTIVE);
-
-	}
 	return r;
 }
 

@@ -47,7 +47,7 @@ int main(void) {
 				do {
 					if (userList[userId].loggedIn == 1) {
 						utn_getNumero(
-								"1)Listar estado de todos los usuarios\n2)Listar todos los productos por categoria\n3)Baja de un producto\n4)Baja de un usuario\n5)Ver tracking global\n6)Filtrar por nombre de producto\n9)Salir\n",
+								"1)Listar estado de todos los usuarios\n2)Listar todos los productos por categoria\n3)Baja de un producto\n4)Baja de un usuario\n5)Ver tracking global\n9)Salir\n",
 								"Ha habido un error\n", 0, 3, &adminOption);
 						switch (adminOption) {
 						case 1:
@@ -178,7 +178,7 @@ int main(void) {
 								printf("\n\nHa habido un error :/\n\n");
 							}
 							break;
-						case 9:
+						case 0:
 							userList[userId].loggedIn = 0;
 							break;
 						default:

@@ -5977,3 +5977,66 @@ Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Product.o" "..\\src\\Product.c" 
 gcc -o Parcial-laboratorio-1.exe "src\\General.o" "src\\Parcial-laboratorio-1.o" "src\\Product.o" "src\\Relationship_TrackingUserAndProducts.o" "src\\TimeFunctions.o" "src\\Tracking.o" "src\\User.o" 
 Info: Nothing to build for Parcial-laboratorio-1
+18:53:01 **** Incremental Build of configuration Debug for project Parcial-laboratorio-1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial-laboratorio-1.o" "..\\src\\Parcial-laboratorio-1.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Product.o" "..\\src\\Product.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Relationship_TrackingUserAndProducts.o" "..\\src\\Relationship_TrackingUserAndProducts.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\User.o" "..\\src\\User.c" 
+gcc -o Parcial-laboratorio-1.exe "src\\General.o" "src\\Parcial-laboratorio-1.o" "src\\Product.o" "src\\Relationship_TrackingUserAndProducts.o" "src\\TimeFunctions.o" "src\\Tracking.o" "src\\User.o" 
+Info: Nothing to build for Parcial-laboratorio-1
+19:07:11 **** Incremental Build of configuration Debug for project Parcial-laboratorio-1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial-laboratorio-1.o" "..\\src\\Parcial-laboratorio-1.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Relationship_TrackingUserAndProducts.o" "..\\src\\Relationship_TrackingUserAndProducts.c" 
+gcc -o Parcial-laboratorio-1.exe "src\\General.o" "src\\Parcial-laboratorio-1.o" "src\\Product.o" "src\\Relationship_TrackingUserAndProducts.o" "src\\TimeFunctions.o" "src\\Tracking.o" "src\\User.o" 
+19:07:25 **** Incremental Build of configuration Debug for project Parcial-laboratorio-1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Relationship_TrackingUserAndProducts.o" "..\\src\\Relationship_TrackingUserAndProducts.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial-laboratorio-1.o" "..\\src\\Parcial-laboratorio-1.c" 
+gcc -o Parcial-laboratorio-1.exe "src\\General.o" "src\\Parcial-laboratorio-1.o" "src\\Product.o" "src\\Relationship_TrackingUserAndProducts.o" "src\\TimeFunctions.o" "src\\Tracking.o" "src\\User.o" 
+19:09:24 **** Incremental Build of configuration Debug for project Parcial-laboratorio-1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Relationship_TrackingUserAndProducts.o" "..\\src\\Relationship_TrackingUserAndProducts.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial-laboratorio-1.o" "..\\src\\Parcial-laboratorio-1.c" 
+gcc -o Parcial-laboratorio-1.exe "src\\General.o" "src\\Parcial-laboratorio-1.o" "src\\Product.o" "src\\Relationship_TrackingUserAndProducts.o" "src\\TimeFunctions.o" "src\\Tracking.o" "src\\User.o" 
+Info: Nothing to build for Parcial-laboratorio-1
+19:13:42 **** Incremental Build of configuration Debug for project Parcial-laboratorio-1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Relationship_TrackingUserAndProducts.o" "..\\src\\Relationship_TrackingUserAndProducts.c" 
+gcc -o Parcial-laboratorio-1.exe "src\\General.o" "src\\Parcial-laboratorio-1.o" "src\\Product.o" "src\\Relationship_TrackingUserAndProducts.o" "src\\TimeFunctions.o" "src\\Tracking.o" "src\\User.o" 
+19:30:17 **** Incremental Build of configuration Debug for project Parcial-laboratorio-1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Relationship_TrackingUserAndProducts.o" "..\\src\\Relationship_TrackingUserAndProducts.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial-laboratorio-1.o" "..\\src\\Parcial-laboratorio-1.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Product.o" "..\\src\\Product.c" 
+gcc -o Parcial-laboratorio-1.exe "src\\General.o" "src\\Parcial-laboratorio-1.o" "src\\Product.o" "src\\Relationship_TrackingUserAndProducts.o" "src\\TimeFunctions.o" "src\\Tracking.o" "src\\User.o" 
+19:31:48 **** Incremental Build of configuration Debug for project Parcial-laboratorio-1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial-laboratorio-1.o" "..\\src\\Parcial-laboratorio-1.c" 
+..\src\Parcial-laboratorio-1.c: In function 'main':
+..\src\Parcial-laboratorio-1.c:93:12: warning: implicit declaration of function 'Relationship_FilterProductByName'; did you mean 'Relationship_SellProduct'? [-Wimplicit-function-declaration]
+   93 |        if (Relationship_FilterProductByName(productList, MAX_PRODUCTS) == 0){
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |            Relationship_SellProduct
+gcc -o Parcial-laboratorio-1.exe "src\\General.o" "src\\Parcial-laboratorio-1.o" "src\\Product.o" "src\\Relationship_TrackingUserAndProducts.o" "src\\TimeFunctions.o" "src\\Tracking.o" "src\\User.o" 
+Info: Nothing to build for Parcial-laboratorio-1
+19:32:04 **** Incremental Build of configuration Debug for project Parcial-laboratorio-1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial-laboratorio-1.o" "..\\src\\Parcial-laboratorio-1.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Relationship_TrackingUserAndProducts.o" "..\\src\\Relationship_TrackingUserAndProducts.c" 
+gcc -o Parcial-laboratorio-1.exe "src\\General.o" "src\\Parcial-laboratorio-1.o" "src\\Product.o" "src\\Relationship_TrackingUserAndProducts.o" "src\\TimeFunctions.o" "src\\Tracking.o" "src\\User.o" 
+19:34:36 **** Incremental Build of configuration Debug for project Parcial-laboratorio-1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Relationship_TrackingUserAndProducts.o" "..\\src\\Relationship_TrackingUserAndProducts.c" 
+gcc -o Parcial-laboratorio-1.exe "src\\General.o" "src\\Parcial-laboratorio-1.o" "src\\Product.o" "src\\Relationship_TrackingUserAndProducts.o" "src\\TimeFunctions.o" "src\\Tracking.o" "src\\User.o" 
+19:36:42 **** Incremental Build of configuration Debug for project Parcial-laboratorio-1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial-laboratorio-1.o" "..\\src\\Parcial-laboratorio-1.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Relationship_TrackingUserAndProducts.o" "..\\src\\Relationship_TrackingUserAndProducts.c" 
+gcc -o Parcial-laboratorio-1.exe "src\\General.o" "src\\Parcial-laboratorio-1.o" "src\\Product.o" "src\\Relationship_TrackingUserAndProducts.o" "src\\TimeFunctions.o" "src\\Tracking.o" "src\\User.o" 
+19:37:59 **** Incremental Build of configuration Debug for project Parcial-laboratorio-1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial-laboratorio-1.o" "..\\src\\Parcial-laboratorio-1.c" 
+gcc -o Parcial-laboratorio-1.exe "src\\General.o" "src\\Parcial-laboratorio-1.o" "src\\Product.o" "src\\Relationship_TrackingUserAndProducts.o" "src\\TimeFunctions.o" "src\\Tracking.o" "src\\User.o" 
+Info: Nothing to build for Parcial-laboratorio-1

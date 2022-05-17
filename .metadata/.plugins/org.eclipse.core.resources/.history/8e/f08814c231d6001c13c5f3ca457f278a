@@ -418,7 +418,6 @@ int Relationship_FilterProductByName(Product productList[], int productSize) {
 					}
 				}
 			}
-			r = 0;
 		}
 		Product_PrintProducts(productList, productSize, ACTIVE);
 

@@ -30,6 +30,5 @@ int Relationship_checkSoldTrackings(Tracking trackingList[], int trackingSize,
 
 int Relationship_SellProduct(Product productList[], int size, User seller);
 
-int Relationship_FilterProductByName(Product productList[], int productSize) ;
-
+int CalculateDistance(int postalCode, int *kilometers);
 #endif /* RELATIONSHIP_TRACKINGUSERANDPRODUCTS_H_ */

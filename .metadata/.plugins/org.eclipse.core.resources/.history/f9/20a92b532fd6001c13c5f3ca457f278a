@@ -13,14 +13,13 @@
 #define FREE 0
 #define ACTIVE 1
 #define MAX_PRODUCTS 5
-#define MAX_PRODUCTNAME 25
 
 typedef struct{
 	int idProduct;
 	int idSeller;
 	short int isEmpty;
 	//AGREGAR RELACION
-	char productName[MAX_PRODUCTNAME];
+	char productName[25];
 	float price;
 	short int category;
 	int stock;
