@@ -1,0 +1,18 @@
+/*
+ * Relationship_TrackingUserAndProducts.h
+ *
+ *  Created on: 14 may 2022
+ *      Author: gonza
+ */
+
+#ifndef RELATIONSHIP_TRACKINGUSERANDPRODUCTS_H_
+#define RELATIONSHIP_TRACKINGUSERANDPRODUCTS_H_
+#include "General.h"
+#include "User.h"
+#include "Product.h"
+#include "Tracking.h"
+
+int Relationship_newTracking(trackingList[], trackingSize,
+		idBuyer, productList[indexBuy].idSeller, productList[indexBuy].idProduct, stockToBuy);
+
+#endif /* RELATIONSHIP_TRACKINGUSERANDPRODUCTS_H_ */

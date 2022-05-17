@@ -1,0 +1,23 @@
+/*
+ * Product.h
+ *
+ *  Created on: 13 may 2022
+ *      Author: gonza
+ */
+
+#ifndef PRODUCT_H_
+#define PRODUCT_H_
+
+typedef struct{
+	int idProducto;
+	short int isEmpty;
+	//AGREGAR RELACION
+	char productName[25];
+	float price;
+	short int category;
+	int stock;
+} Product;
+
+
+
+#endif /* PRODUCT_H_ */

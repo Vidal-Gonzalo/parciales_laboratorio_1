@@ -1,0 +1,20 @@
+/*
+ ============================================================================
+ Name        : Parcial-laboratorio-1.c
+ Author      : Gonzalo Vidal
+ Version     :
+ Copyright   : Parcial laboratorio
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include "General.h"
+#include "User.h"
+
+int main(void) {
+	setbuf(stdout, NULL);
+	User userList[MAX_USERS];
+	return EXIT_SUCCESS;
+}

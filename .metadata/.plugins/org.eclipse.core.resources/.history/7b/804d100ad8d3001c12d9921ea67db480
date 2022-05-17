@@ -1,0 +1,35 @@
+/*
+ * Product.h
+ *
+ *  Created on: 14 may 2022
+ *      Author: gonza
+ */
+
+#ifndef PRODUCT_H_
+#define PRODUCT_H_
+
+typedef struct{
+	int idProducto;
+	short int isEmpty;
+	//AGREGAR RELACION
+	char productName[25];
+	float price;
+	short int category;
+	int stock;
+} Product;
+
+int Product_initializeProducts(Product productList[], int size);
+int Product_printProducts(Product ProductsList[], int size);
+int Product_Login(Product productList[], int size);
+int Product_SearchSpace(Product productList[], int size, int status);
+int Product_Membership(Product productList[], int size);
+int Product_Baja(Product productList[], int size);
+int Product_Edit(Product productList[], int size);
+int Product_SearchIndexPerId(Product productList[], int size, int ID);
+int Product_AveragePrice(Product productList[], int size);
+int Product_Sort(Product ProductsList[], int size, int order);
+int Product_SortByFlightcode(Product ProductsList[], int size, int order);
+Product Product_ModificarUno(Product s);
+Product Product_LoadProduct();
+
+#endif /* PRODUCT_H_ */

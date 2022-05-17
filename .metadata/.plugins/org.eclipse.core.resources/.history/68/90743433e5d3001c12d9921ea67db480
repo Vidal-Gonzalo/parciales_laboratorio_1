@@ -1,0 +1,16 @@
+/*
+ * Relationship_TrackingUserAndProducts.h
+ *
+ *  Created on: 14 may 2022
+ *      Author: gonza
+ */
+
+#ifndef RELATIONSHIP_TRACKINGUSERANDPRODUCTS_H_
+#define RELATIONSHIP_TRACKINGUSERANDPRODUCTS_H_
+#include "General.h"
+#include "User.h"
+#include "Product.h"
+
+int relationship_newTracking()
+
+#endif /* RELATIONSHIP_TRACKINGUSERANDPRODUCTS_H_ */

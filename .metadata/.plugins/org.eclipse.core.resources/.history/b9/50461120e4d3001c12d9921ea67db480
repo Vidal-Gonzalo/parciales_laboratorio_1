@@ -1,0 +1,26 @@
+/*
+ * Tracking.h
+ *
+ *  Created on: 14 may 2022
+ *      Author: gonza
+ */
+
+#ifndef TRACKING_H_
+#define TRACKING_H_
+
+typedef struct{
+	int idTracking;
+	int idProduct;
+	short int isEmpty;
+
+	int quantity;
+	int distanceKM;
+	long int arrivingTime;
+}Tracking;
+
+
+int Product_initializeProducts(Product productList[], int size);
+int Product_printProducts(Product ProductsList[], int size);
+int Product_SearchSpace(Product productList[], int size, int status);
+
+#endif /* TRACKING_H_ */

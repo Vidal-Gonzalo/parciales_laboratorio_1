@@ -1,0 +1,18 @@
+/*
+ * Relationship_TrackingUserAndProducts.c
+ *
+ *  Created on: 14 may 2022
+ *      Author: gonza
+ */
+
+#include "Relationship_TrackingUserAndProducts.h"
+
+int Relationship_newTracking(Tracking trackingList, int trackingSize,
+		User userList[], int userSize, Product productList[], int productSize) {
+	int r = -1;
+	if (userList != NULL && productList != NULL && userList != NULL
+			&& userSize > 0 && productSize > 0 && trackingSize > 0) {
+
+	}
+	return r;
+}
