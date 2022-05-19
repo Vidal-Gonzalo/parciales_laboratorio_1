@@ -7,7 +7,10 @@
 
 #include "Product.h"
 #include "General.h"
-
+static int idHardcodedProductAI = 3000;
+static int HardcodedProduct_getUniqueId() {
+	return idHardcodedProductAI++;
+}
 /** \brief To indicate that all position in the array are empty,
  * this function put the flag (isEmpty) in TRUE in all
  * position of the array
@@ -28,8 +31,6 @@ int Product_initializeProducts(Product *productList, int size) {
 	}
 	return r;
 }
-
-
 
 /** \brief print the content of one element of Product
  *
@@ -113,8 +114,6 @@ int Product_Sort(Product productList[], int size) {
 	return r;
 }
 
-
-
 /** \brief Remove a Product by Id (put isEmpty Flag in 1)
  *
  * \param list Product*
@@ -162,8 +161,6 @@ int Product_RemoveProduct(Product productList[], int size) {
 	}
 	return r;
 }
-
-
 
 /** \brief Search an especific space in the array
  *
@@ -247,6 +244,27 @@ int Product_LoadProduct(Product *auxiliar) {
 
 	return r;
 
+}
+
+//Repetí el ID
+
+int Product_HardcodeProduct(char productName[], float price, short int category,
+		int stock, Product productList[], int size) {
+	int r = -1;
+	Product aux;
+
+	int index = Product_SearchSpace(productList, size, FREE);
+	if (index != -1) {
+		strncpy(aux.productName, productName, MAX_PRODUCTNAME);
+		aux.price = price;
+		aux.category = category;
+		aux.stock = stock;
+		aux.isEmpty = ACTIVE;
+		aux.idProduct = HardcodedProduct_getUniqueId();
+		productList[index] = aux;
+	}
+
+	return r;
 }
 
 /** \brief find a Product by Id en returns the index position in ProductsList.

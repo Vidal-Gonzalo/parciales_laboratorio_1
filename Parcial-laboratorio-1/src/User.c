@@ -73,6 +73,26 @@ int User_Membership(User userList[], int size) {
 	return r;
 }
 
+int User_HardcodeUser(char email[], char password[], char address[],
+		int postalCode, int userType, User userList[], int size) {
+	int r = -1;
+	User aux;
+	int index = User_SearchSpace(userList, size, FREE);
+	if (index != -1) {
+		strncpy(aux.email, email, MAX_EMAIL);
+		strncpy(aux.password, password, MAX_PASSWORD);
+		strncpy(aux.address, address, MAX_ADDRESS);
+		aux.postalCode = postalCode;
+		aux.type = userType;
+		aux.isEmpty = OCCUPIED;
+		aux.idUsuario = User_getUniqueId();
+		userList[index] = aux;
+		r = 0;
+	}
+
+	return r;
+}
+
 int User_Login(User userList[], int size, int *userIndex) {
 	int r = -1;
 	char auxEmail[MAX_EMAIL];
@@ -187,8 +207,6 @@ int User_LowMembership(User userList[], int userSize, User user) {
 	}
 	return r;
 }
-
-
 
 /** \brief Search an especific space in the array
  *

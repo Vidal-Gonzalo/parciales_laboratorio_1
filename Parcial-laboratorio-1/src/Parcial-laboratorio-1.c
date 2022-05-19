@@ -32,6 +32,20 @@ int main(void) {
 	Product_initializeProducts(productList, MAX_PRODUCTS);
 	Tracking_initializeTrackings(trackingList, MAX_TRACKINGS);
 
+
+	User_HardcodeUser("vendedor@gmail.com", "asd3", "calle", 1001, 1, userList,
+				MAX_USERS);
+	User_HardcodeUser("admin@gmail.com", "asd3", "calle", 1001, 2, userList,
+					MAX_USERS);
+	User_HardcodeUser("comprador@gmail.com", "asd3", "calle", 1001, 1, userList,
+					MAX_USERS);
+	Product_HardcodeProduct("Remera", 200, 2, 30, productList, MAX_PRODUCTS);
+	Product_HardcodeProduct("Remera", 200, 2, 10, productList, MAX_PRODUCTS);
+	Product_HardcodeProduct("Remera", 300, 2, 50, productList, MAX_PRODUCTS);
+	Product_HardcodeProduct("Pantalones", 200, 3, 20, productList,
+			MAX_PRODUCTS);
+	Product_HardcodeProduct("Gorra", 200, 1, 80, productList, MAX_PRODUCTS);
+
 	printExamMenu(0);
 
 	do {
@@ -90,7 +104,8 @@ int main(void) {
 							}
 							break;
 						case 6:
-							if (Relationship_FilterProductByName(productList, MAX_PRODUCTS) == 0){
+							if (Relationship_FilterProductByName(productList,
+									MAX_PRODUCTS) == 0) {
 								printf("\nProductos listados\n");
 							} else {
 								printf("Ha habido un error\n\n");

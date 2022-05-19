@@ -1,1 +1,7 @@
-Info: Nothing to build for Parcial-laboratorio-1
+17:11:26 **** Incremental Build of configuration Debug for project Parcial-laboratorio-1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial-laboratorio-1.o" "..\\src\\Parcial-laboratorio-1.c" 
+gcc -o Parcial-laboratorio-1.exe "src\\General.o" "src\\Parcial-laboratorio-1.o" "src\\Product.o" "src\\Relationship_TrackingUserAndProducts.o" "src\\TimeFunctions.o" "src\\Tracking.o" "src\\User.o" 
+
+17:11:26 Build Finished. 0 errors, 0 warnings. (took 512ms)
+

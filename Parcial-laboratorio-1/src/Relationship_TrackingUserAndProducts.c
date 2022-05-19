@@ -18,7 +18,7 @@ static int Tracking_GetUniqueId() {
 	return idTrackingAI++;
 }
 
-static int idProductAI = 3000;
+static int idProductAI = 4000;
 static int Product_getUniqueId() {
 	return idProductAI++;
 }
@@ -117,7 +117,6 @@ int Relationship_SellProduct(Product productList[], int size, User seller) {
 			} else {
 				printf("Hubo un error en la carga del producto.\n\n");
 			}
-
 		}
 	}
 	return r;
@@ -300,9 +299,7 @@ int Relationship_checkBoughtTrackings(Tracking trackingList[], int trackingSize,
 		} else {
 			printf("¡Todavia no compraste ningun elemento!\n");
 		}
-
 	}
-
 	r = 0;
 
 	return r;
@@ -398,6 +395,10 @@ int Relationship_FilterProductByName(Product productList[], int productSize) {
 	int r = -1;
 	char productNameToSearch[MAX_PRODUCTNAME];
 	Product aux;
+	Product newArray[50];
+	int newArrayIndexFree;
+	int newArrayIndexActive;
+	Product_initializeProducts(newArray, 50);
 
 	if (productList != NULL && productSize > 0) {
 
@@ -405,23 +406,29 @@ int Relationship_FilterProductByName(Product productList[], int productSize) {
 				"Ingrese el nombre de producto a buscar\n",
 				"Ha habido un error, vuelva a intentar.\n", 3) == 0) {
 			for (int i = 0; i < productSize; i++) {
-				for (int j = i + 1; j < productSize; j++) {
-					if (strcmp(productList[i].productName, productNameToSearch)
-							== 0
-							&& strcmp(productList[j].productName,
-									productNameToSearch) == 0) {
-						if (productList[i].stock < productList[j].stock) {
-							aux = productList[i];
-							productList[i] = productList[j];
-							productList[j] = aux;
+				if (strcmp(productList[i].productName, productNameToSearch)
+						== 0) {
+					newArrayIndexFree = Product_SearchSpace(newArray, 50, FREE);
+					newArray[newArrayIndexFree] = productList[i];
+				}
+			}
+			newArrayIndexActive = Product_SearchSpace(newArray, 50, ACTIVE);
+			if (newArrayIndexActive != -1) {
+				for (int i = 0; i < 50; i++) {
+					for (int j = i + 1; j < 50; j++) {
+						if (newArray[i].stock < newArray[j].stock) {
+							aux = newArray[i];
+							newArray[i] = newArray[j];
+							newArray[j] = aux;
 						}
 					}
 				}
-			}
-			r = 0;
-		}
-		Product_PrintProducts(productList, productSize, ACTIVE);
 
+				Product_PrintProducts(newArray, 50, ACTIVE);
+				r = 0;
+			}
+
+		}
 	}
 	return r;
 }

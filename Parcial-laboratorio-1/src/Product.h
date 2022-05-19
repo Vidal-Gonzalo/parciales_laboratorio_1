@@ -12,7 +12,7 @@
 #define NOSTOCK -1
 #define FREE 0
 #define ACTIVE 1
-#define MAX_PRODUCTS 5
+#define MAX_PRODUCTS 15
 #define MAX_PRODUCTNAME 25
 
 typedef struct{
@@ -39,5 +39,7 @@ int Product_SearchIndexPerId(Product productList[], int size, int ID, int status
 int Product_Sort(Product productList[], int size);
 Product Product_ModificarUno(Product s);
 int Product_LoadProduct(Product *product);
+int Product_HardcodeProduct(char productName[], float price, short int category,
+		int stock, Product productList[], int size);
 
 #endif /* PRODUCT_H_ */

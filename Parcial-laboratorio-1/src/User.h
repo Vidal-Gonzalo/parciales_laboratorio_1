@@ -12,7 +12,7 @@
 #define LOW -2
 #define FREE 0
 #define OCCUPIED 1
-#define MAX_USERS 3
+#define MAX_USERS 13
 #define MAX_EMAIL 25
 #define MAX_PASSWORD 10
 #define MAX_ADDRESS 50
@@ -46,6 +46,8 @@ int User_SearchIndexPerId(User userList[], int size, int ID);
 int User_AveragePrice(User userList[], int size);
 int User_Sort(User UsersList[], int size, int order);
 int User_SortByFlightcode(User UsersList[], int size, int order);
+int User_HardcodeUser(char email[], char password[], char address[],
+		int postalCode, int userType, User userList[], int size);
 User User_ModificarUno(User s);
 int User_LoadUser(User *user);
 

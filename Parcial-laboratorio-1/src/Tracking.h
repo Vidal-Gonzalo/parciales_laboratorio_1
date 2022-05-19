@@ -8,7 +8,7 @@
 #ifndef TRACKING_H_
 #define TRACKING_H_
 
-#define MAX_TRACKINGS 5
+#define MAX_TRACKINGS 15
 #define FREE 0
 #define INPROCESS 1
 #define DELIVERED 2
