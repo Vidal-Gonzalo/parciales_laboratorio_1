@@ -23,9 +23,12 @@ int main(void) {
 	LinkedList *listOfArcades = ll_newLinkedList();
 	LinkedList *listOfGames = ll_newLinkedList();
 
-	//ARREGLAR:
+	//Filter
 	/*
-	 * 2-Documentacion
+	 * Nueva funcion en linkedlist que funcione de filtro
+	 * y esa funcion la aplicamos en un informe.
+	 * Filtrar la lista por juego
+	 *
 	 */
 
 	int option;
@@ -118,7 +121,7 @@ int main(void) {
 			case 10:
 				do {
 					if (utn_getNumero(
-							"\nSubmenu:\n--------\n\n1-Listar salones con mas de 4 arcades\n2-Listar arcades para mas de 2 jugadores\n3-Listar informacion de salon especifico\n4-Listar salones completos\n5-Listar arcades de un salon\n6-Listar salon con mas cantidad de arcade\n7-Listar arcades son sonido MONO y genero PLATAFORMA\n8-Salir\n",
+							"\nSubmenu:\n--------\n\n1-Listar salones con mas de 4 arcades\n2-Listar arcades para mas de 2 jugadores\n3-Listar informacion de salon especifico\n4-Listar salones completos\n5-Listar arcades de un salon\n6-Listar salon con mas cantidad de arcade\n7-Listar arcades son sonido MONO y genero PLATAFORMA\n8-Filtrar lista de juegos por genero\n9-Salir\n",
 							"Ha habido un error, vuelva a intentar\n", 1, 3,
 							&subOption) == 0) {
 						switch (subOption) {
@@ -191,14 +194,21 @@ int main(void) {
 							}
 							break;
 						case 8:
+							if(GameController_FilterListPerGenre(listOfGames) == 0){
+								puts("Lista impresa\n");
+							} else {
+								puts("Hubo un error\n");
+							}
+							break;
+						case 9:
 							puts("Saliendo...\n");
 							break;
 						default:
-							printf("Por favor, elija un numero del 1 al 8\n");
+							printf("Por favor, elija un numero del 1 al 9\n");
 							break;
 						}
 					}
-				} while (subOption != 8);
+				} while (subOption != 9);
 				break;
 			case 11:
 				printf("Saliendo...\n");

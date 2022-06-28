@@ -37,5 +37,14 @@ int Game_LoadGame(Game *auxiliar) {
 	return r;
 }
 
+int Game_AskForGameGenre(int *genre) {
+	int r = -1;
+	if (utn_getNumero(
+			"Filtrar por genero: (1-Plataforma/2-Aventura/3-Laberinto/4-Otro)\n",
+			"Ha habido un error, vuelva a intentar\n", 1, 3, genre) == 0) {
+		r = 0;
+	}
+	return r;
+}
 
 #endif /* GAME_INPUTGAME_C_ */

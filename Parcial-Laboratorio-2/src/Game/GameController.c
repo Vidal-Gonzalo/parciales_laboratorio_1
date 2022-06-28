@@ -46,8 +46,6 @@ int GameController_LoadGamesFromText(char *path, LinkedList *pArrayListGame) {
 	return r;
 }
 
-
-
 int GameController_RegisterGame(char *path, LinkedList *pArrayListGame) {
 	int r = -1;
 	Game *game;
@@ -127,6 +125,26 @@ int GameController_SearchGameIndexPerId(LinkedList *gamesList, int *id) {
 	return r;
 }
 
+int GameController_FilterListPerGenre(LinkedList *gamesList) {
+	int r = -1;
+	int genre;
+	LinkedList *auxList = ll_newLinkedList();
+
+	if (gamesList != NULL && genre > 0) {
+		if (Game_AskForGameGenre(&genre) == 0) {
+			auxList = ll_filter(gamesList, Game_CheckForSameGenre, genre);
+			if (auxList != NULL) {
+				int auxListLength = ll_len(auxList);
+				GameController_PrintGames(auxList, auxListLength);
+				r = 0;
+			}
+		}
+
+	}
+
+	return r;
+}
+
 /** \brief Guarda en el path recibido la linkedList recibida.
  *
  * \param char *path,
@@ -171,5 +189,4 @@ int GameController_SaveGameAsText(char *path, LinkedList *pArrayListGame) {
 
 	return r;
 }
-
 

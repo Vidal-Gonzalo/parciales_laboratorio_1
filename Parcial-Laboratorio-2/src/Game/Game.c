@@ -23,7 +23,6 @@ static int isNameGame(char newArray[], int size) {
 	return r;
 }
 
-
 /** \brief Retorna un espacio de memoria para un Game
  *
  * \return Game*
@@ -338,7 +337,6 @@ int Game_verifyGenreTxt(char *genreTxt, int *genreVerified) {
 	return r;
 }
 
-
 int Game_CheckForBiggerName(void *pGame1, void *pGame2) {
 	if (strcmp(((Game*) pGame1)->name, ((Game*) pGame2)->name) > 0) {
 		return 1;
@@ -347,4 +345,12 @@ int Game_CheckForBiggerName(void *pGame1, void *pGame2) {
 		return -1;
 	}
 	return 0;
+}
+
+int Game_CheckForSameGenre(void *pGame, int genre) {
+	if (((Game*) pGame)->genre == genre) {
+		return 1;
+	} else {
+		return -1;
+	}
 }

@@ -18,6 +18,6 @@
 
 int Game_LoadGame(Game *auxiliar);
 
-int Game_ModifyOne(Game *p);
+int Game_AskForGameGenre(int *genre);
 
 #endif /* GAME_INPUTGAME_H_ */

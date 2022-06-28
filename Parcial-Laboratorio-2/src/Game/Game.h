@@ -59,5 +59,6 @@ int Game_readGenreGame(int *genre, char *genreTxt);
 int Game_verifyGenreTxt(char *genreTxt, int *genreVerified);
 
 int Game_CheckForBiggerName(void *pGame1, void *pGame2);
+int Game_CheckForSameGenre(void *pGame, int id);
 
 #endif /* GAME_H_ */

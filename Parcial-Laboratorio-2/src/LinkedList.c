@@ -219,7 +219,7 @@ int ll_clear(LinkedList *this) {
 	int returnAux = -1;
 	int longitud = ll_len(this);
 	if (this != NULL) {
-		for (int i = longitud-1; i >= 0; i--) { //De adelante patra
+		for (int i = longitud - 1; i >= 0; i--) { //De adelante patra
 			ll_remove(this, i);
 		}
 		this->pFirstNode = NULL;
@@ -345,7 +345,7 @@ int ll_contains(LinkedList *this, void *pElement) {
 	if (this != NULL) {
 		returnAux = 0;
 		int index = ll_indexOf(this, pElement);
-		if(index != -1){
+		if (index != -1) {
 			returnAux = 1;
 		}
 	}
@@ -451,5 +451,21 @@ int ll_sort(LinkedList *this, int (*pFunc)(void*, void*), int order) {
 		returnAux = 0;
 	}
 	return returnAux;
+}
+
+LinkedList* ll_filter(LinkedList *this, int (*pFunc)(void*, int), int filter) {
+	LinkedList *newList = ll_newLinkedList();
+	void *pElement = NULL;
+	int longitud = ll_len(this);
+
+	if (this != NULL) {
+		for (int i = 0; i < longitud; i++) {
+			pElement = ll_get(this, i);
+			if (pFunc(pElement, filter) == 1) {
+				ll_add(newList, pElement);
+			}
+		}
+	}
+	return newList;
 }
 
