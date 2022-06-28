@@ -23,3 +23,9 @@ gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Arcade\\ArcadeController.o" "..
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Playroom\\PlayroomController.o" "..\\src\\Playroom\\PlayroomController.c" 
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Game\\InputGame.o" "..\\src\\Game\\InputGame.c" 
 gcc -o Parcial-Laboratorio-2.exe "src\\Arcade\\Arcade.o" "src\\Arcade\\ArcadeController.o" "src\\Game\\Game.o" "src\\Game\\GameController.o" "src\\Game\\InputGame.o" "src\\General.o" "src\\LinkedList.o" "src\\Parcial-Laboratorio-2.o" "src\\Parser.o" "src\\Playroom\\InputPlayroom.o" "src\\Playroom\\Playroom.o" "src\\Playroom\\PlayroomController.o" "src\\Relationships\\Relationships_ArcadePlayroomAndGames.o" 
+18:33:57 **** Incremental Build of configuration Debug for project Parcial-Laboratorio-2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Playroom\\InputPlayroom.o" "..\\src\\Playroom\\InputPlayroom.c" 
+gcc -o Parcial-Laboratorio-2.exe "src\\Arcade\\Arcade.o" "src\\Arcade\\ArcadeController.o" "src\\Game\\Game.o" "src\\Game\\GameController.o" "src\\Game\\InputGame.o" "src\\General.o" "src\\LinkedList.o" "src\\Parcial-Laboratorio-2.o" "src\\Parser.o" "src\\Playroom\\InputPlayroom.o" "src\\Playroom\\Playroom.o" "src\\Playroom\\PlayroomController.o" "src\\Relationships\\Relationships_ArcadePlayroomAndGames.o" 
+Info: Nothing to build for Parcial-Laboratorio-2
+Info: Nothing to build for Parcial-Laboratorio-2
