@@ -1,0 +1,19 @@
+id, SalonID, JuegoID, Nacionalidad, Tipo de sonido, Jugadores, Fichas
+1,1,20,Egypt,Mono,1,50
+2,1,3,Indonesia,Estereo,2,22
+3,1,21,Nigeria,Estereo,2,34
+4,1,6,China,Estereo,4,44
+5,1,11,Macedonia,Mono,1,55
+6,1,14,Lithuania,Mono,1,63
+7,3,22,Indonesia,Mono,1,71
+8,3,2,Czech Republic,Estereo,2,82
+9,3,10,Netherlands,Mono,2,93
+10,4,5,Sweden,Mono,1,102
+11,4,13,China,Estereo,1,112
+12,1,17,Mexico,Estereo,1,121
+13,1,2,Vietnam,Mono,2,133
+14,2,3,Colombia,Mono,2,144
+15,2,4,Sweden,Mono,2,155
+16,4,5,Argentina,Mono,2,155
+17,4,5,Brasil,Estereo,2,155
+18,4,5,Brasil,Mono,3,155

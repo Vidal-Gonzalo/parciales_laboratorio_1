@@ -128,7 +128,7 @@ int getShortInt(short int *number1) {
 }
 
 int isNumber(char arrayNum[]) {
-	int r = -1;
+	int r = 0;
 	int i;
 
 	if (arrayNum != NULL) {
@@ -137,12 +137,11 @@ int isNumber(char arrayNum[]) {
 			i = 1;
 		}
 		for (i = 0; arrayNum[i] != '\0'; i++) {
-			if (arrayNum[i] < '0' || arrayNum[i] > '9') {
+			if (arrayNum[i] > '9' || arrayNum[i] < '0') {
 				r = -1;
 				break;
 			}
 		}
-		r = 0;
 	}
 	return r;
 }
@@ -402,6 +401,8 @@ int getAlphanumeric(char newArray[], int size) {
 			if (verifyAlphanumeric(buffer, sizeof(buffer)) == 0) {
 				strncpy(newArray, buffer, size);
 				r = 0;
+			} else {
+				printf("ups");
 			}
 		}
 	}
@@ -411,13 +412,21 @@ int getAlphanumeric(char newArray[], int size) {
 int verifyAlphanumeric(char newArray[], int size) {
 	int r = -1;
 	int i;
+	int isNumber = 0;
+	int isAlpha = 0;
+
 	if (newArray != NULL) {
 		for (i = 0; newArray[i] != '\0' && i < size; i++) {
-			if ((newArray[i] < 'A' || newArray[i] > 'Z')
-					&& (newArray[i] < 'a' || newArray[i] > 'z')) {
-				r = 0;
-				break;
+			if ((newArray[i] > 'A' && newArray[i] < 'Z')
+					|| (newArray[i] > 'a' && newArray[i] < 'z')) {
+				isAlpha = 1;
 			}
+			if (newArray[i] > '0' && newArray[i] < '9') {
+				isNumber = 1;
+			}
+		}
+		if (isNumber == 1 && isAlpha == 1) {
+			r = 0;
 		}
 	}
 	return r;

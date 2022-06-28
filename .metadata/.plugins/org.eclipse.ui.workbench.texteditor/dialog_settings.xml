@@ -6,26 +6,40 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="trackingList"/>
+		<item key="selection" value="Arcade"/>
 		<list key="findhistory">
+			<item value="Playroom"/>
+			<item value="gameList"/>
+			<item value="playroomList"/>
+			<item value="arcadeList"/>
+			<item value="JUEGO"/>
+			<item value="pasajero"/>
+			<item value="ups"/>
+			<item value="Passenger"/>
+			<item value="no es valido"/>
+			<item value="Shopping"/>
+			<item value="apellido"/>
+			<item value="nombre"/>
 			<item value="TrackingList"/>
 			<item value="Screen"/>
 			<item value="Screen_SearchIndexPerId"/>
-			<item value="Product"/>
-			<item value="switch (order) {"/>
-			<item value="ePantalla"/>
-			<item value="ProductList"/>
-			<item value="User"/>
-			<item value="UserList"/>
-			<item value="Passenger"/>
 		</list>
 		<list key="replacehistory">
+			<item value="Arcade"/>
+			<item value="pArrayListGame"/>
+			<item value="pArrayListPlayroom"/>
+			<item value="pArrayListArcade"/>
+			<item value="Game"/>
+			<item value="juego"/>
+			<item value="JUEGO"/>
+			<item value="arcade"/>
+			<item value="playroom"/>
+			<item value="Playroom"/>
+			<item value="address"/>
+			<item value="name"/>
 			<item value="trackingList"/>
 			<item value="Tracking"/>
 			<item value="Product"/>
-			<item value="productList"/>
-			<item value="userList"/>
-			<item value="User"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">

@@ -32,7 +32,6 @@ int main(void) {
 	Product_initializeProducts(productList, MAX_PRODUCTS);
 	Tracking_initializeTrackings(trackingList, MAX_TRACKINGS);
 
-
 	User_HardcodeUser("vendedor@gmail.com", "asd3", "calle", 1001, 1, userList,
 				MAX_USERS);
 	User_HardcodeUser("admin@gmail.com", "asd3", "calle", 1001, 2, userList,
